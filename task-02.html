@@ -6,12 +6,68 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 <div id="root"></div>
 
 <script type="text/babel">
+
+    const Header = props => {
+        return (
+            <header className="header container">
+                <div className="header-top">
+                    <a href="#" className="logo">
+                        <img src={props.logoImg} alt={props.name}/>
+                    </a>
+                    <div className="header-info-text">
+                        <p>{props.infoText}</p>
+                    </div>
+                    <div className="contacts">
+                        <span>{props.contact1}</span>
+                        <span>{props.contact2}</span>
+                    </div>
+                    <div className="header-info">
+                        <span className="ic-time">{props.workTime}</span>
+                        <span className="ic-mail">{props.email}</span>
+                    </div>
+                </div>
+                <div className="header-bottom container">
+                    <div className="search-field-wrap">
+                        <input type="text" name="search"
+                               placeholder={props.placeHolder}
+                               className="search-field"/>
+                    </div>
+                    <div className="header-social">
+                        <a href="#" className="icon ic-whatsapp"></a>
+                        <a href="#" className="icon ic-telegram"></a>
+                        <a href="#" className="icon ic-point"></a>
+                    </div>
+                </div>
+            </header>
+        );
+    };
+
+    const carpet = (
+        <React.Fragment>
+            <Header logoImg="images/main-logo.png"
+                    name="мир ковролина"
+                    infoText="Продаем ковровые покрытия оптом и в розницу, со склада в Москве. Доставка по всей России и СНГ"
+                    contact1="+7 995 888-35-63"
+                    contact2="8 495 902-71-08"
+                    workTime="Пн-Пт,9:00 до 18:00"
+                    email="zakaz@mir-kovrolina.ru"
+                    placeHolder="Введите навзание товара и выберите нужный из списка"/>
+        </React.Fragment>
+    );
+
+    const root = document.getElementById('root');
+    ReactDOM.createRoot(root).render(carpet);
 
 </script>
 
