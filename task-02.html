@@ -53,6 +53,30 @@
         );
     };
 
+    const Navigation = props => {
+        return (
+            <nav className="main-nav">
+                <div className="main-nav-inner container">
+                    <ul className="main-nav-list">
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{props.link1}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link lin2">{props.link2}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link lin3">{props.link3}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{props.link4}</a>
+                        </li>
+                    </ul>
+                    <button type="button" className="btn">{props.navBtn}</button>
+                </div>
+            </nav>
+        );
+    };
+
     const carpet = (
         <React.Fragment>
             <Header logoImg="images/main-logo.png"
@@ -62,7 +86,14 @@
                     contact2="8 495 902-71-08"
                     workTime="Пн-Пт,9:00 до 18:00"
                     email="zakaz@mir-kovrolina.ru"
-                    placeHolder="Введите навзание товара и выберите нужный из списка"/>
+                    placeHolder="Введите навзание товара и выберите нужный из списка"
+            />
+            <Navigation link1='Каталог'
+                        link2="Галерея работ"
+                        link3="О компании"
+                        link4="Контакты"
+                        navBtn="Корзина"
+            />
         </React.Fragment>
     );
 
