@@ -27,38 +27,17 @@
 
     const movie = (
         <React.Fragment>
-            <Card name="Леон" date={1994} img="https://cs9.pikabu.ru/post_img/2018/02/11/3/1518319552189271313.jpg"/>
-            <Card name="Побег из Шоушенга" date={1994}
-                  img="https://yeltsin.ru/imageurl/c400x400/archive/image/Jz1JoIyEGzMnE0ufJzkdn1c3GzbX/uploads/upload/2019/10/11/TheShawshankRedemption_still5.jpeg"/>
-            <Card name="Достучаться до небес" date={1997} img="https://ic.pics.livejournal.com/dubikvit/65747770/3414600/3414600_900.jpg"/>
-        </React.Fragment>
+            <div className="card-wrap">
+                <Card name="Леон" date={1994} img="https://cs9.pikabu.ru/post_img/2018/02/11/3/1518319552189271313.jpg"/>
+                <Card name="Побег из Шоушенга" date={1994}
+                      img="https://yeltsin.ru/imageurl/c400x400/archive/image/Jz1JoIyEGzMnE0ufJzkdn1c3GzbX/uploads/upload/2019/10/11/TheShawshankRedemption_still5.jpeg"/>
+                <Card name="Достучаться до небес" date={1997} img="https://ic.pics.livejournal.com/dubikvit/65747770/3414600/3414600_900.jpg"/>
+            </div>
+            </React.Fragment>
     );
 
     const root = document.getElementById('root');
     ReactDOM.createRoot(root).render(movie);
-
-    // <div className="blog-card spring-fever">
-    //     <div className="title-content">
-    //         <h3>SPRING FEVER</h3>
-    //         <hr/>
-    //         <div className="intro">Yllamco laboris nisi ut aliquip ex ea commodo.</div>
-    //     </div>
-    //     <!-- /.title-content -->
-    //     <div className="card-info">
-    //         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-    //         dolore magna aliqua. Ut enim ad minim.
-    //     </div>
-    //     <!-- /.card-info -->
-    //     <div className="utility-info">
-    //         <ul className="utility-list">
-    //             <li className="date">03.12.2015</li>
-    //         </ul>
-    //     </div>
-    //     <!-- /.utility-info -->
-    //     <!-- overlays -->
-    //     <div className="gradient-overlay"></div>
-    //     <div className="color-overlay"></div>
-    // </div><!-- /.blog-card -->
 
 </script>
 
