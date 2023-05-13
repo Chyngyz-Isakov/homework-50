@@ -77,6 +77,15 @@
         );
     };
 
+    const BreadCrumbs = props =>{
+        return (
+            <ul className="breadcrumb container">
+                <li><a href="#">{props.main}</a></li>
+                <li className="breadcrumb-selected">{props.tel}</li>
+            </ul>
+        );
+    };
+
     const carpet = (
         <React.Fragment>
             <Header logoImg="images/main-logo.png"
@@ -94,6 +103,9 @@
                         link4="Контакты"
                         navBtn="Корзина"
             />
+            <BreadCrumbs
+            main="Главная"
+            tel="Контакты"/>
         </React.Fragment>
     );
 
