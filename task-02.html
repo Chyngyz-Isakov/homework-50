@@ -151,6 +151,28 @@
         );
     };
 
+    const Footer = props => {
+        return (
+            <footer className="footer">
+                <div className="footer-inner container">
+                    <div className="footer-top">
+                        <span className="footer-top-left">{props.text1}</span>
+                        <span className="footer-top-right">{props.text2}
+                            <a href="#" target="_blank" className="ftr-b">{props.text3}</a>  и <a
+                                href="#" target="_blank" className="ftr-b">{props.text4}</a> Google.</span>
+                    </div>
+
+                    <div className="footer-bottom">
+                        <span className="fb-1"> <a href target="#">{props.subText1}</a> </span>
+                        <span className="fb-2"> <a href target="#">{props.subText2}</a> </span>
+                        <span className="fb-3">{props.subText3}</span>
+                    </div>
+
+                </div>
+            </footer>
+        );
+    };
+
     const carpet = (
         <React.Fragment>
             <Header logoImg="images/main-logo.png"
@@ -180,6 +202,14 @@
                       subtitle="Для проезда на нашу территорию обязательно нужно выписать пропуск на свой автомобиль. Заявку на оформление можно оставить ниже:"
                       btn="отправить"
             />
+            <Footer text1="Информация, представленная на сайте, не является публичной офертой. Поэтому не служит поводом для совершения купли-продажи
+            (ч. 2 ст. 437 ГК РФ). Цена и условия продажи обсуждаются с менеджером в индивидуальном порядке."
+                    text2="Сайт защищён сертификатом SSL и применена"
+                    text3="Политика конфиденциальности"
+                    text4="Условия обслуживания"
+                    subText1="Политика конфиденциальности"
+                    subText2="Защита передаваемых данных"
+                    subText3="&copy; Мир-Ковролина. 2011-2021"/>
         </React.Fragment>
     );
 
