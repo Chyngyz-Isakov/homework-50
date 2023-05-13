@@ -77,12 +77,37 @@
         );
     };
 
-    const BreadCrumbs = props =>{
+    const BreadCrumbs = props => {
         return (
             <ul className="breadcrumb container">
                 <li><a href="#">{props.main}</a></li>
                 <li className="breadcrumb-selected">{props.tel}</li>
             </ul>
+        );
+    };
+
+    const Content1 = props => {
+        return (
+            <div className="main-contacts container-2">
+                <h1 className="main-contacts-title">{props.contacts}</h1>
+                <div className="main-contacts-inner">
+                    <div className="contacts-inner-info">
+                        <span className="contacts-mob">{props.tel1}</span>
+                        <span className="contacts-tel">{props.tel2}</span>
+                        <span className="contacts-mail">{props.email}</span>
+                        <span className="contacts-work-time">{props.workTime}</span>
+                        <div className="main-social">
+                            <a href="#" className="main-icon ic-whatsapp"></a>
+                            <a href="#" className="main-icon ic-telegram"></a>
+                            <a href="#" className="main-icon ic-viber"></a>
+                            <a href="#" className="main-icon ic-vk"></a>
+                        </div>
+                    </div>
+                    <div className="contacts-inner-map">
+                        <img src="images/Map.jpg" alt="map"/>
+                    </div>
+                </div>
+            </div>
         );
     };
 
@@ -103,9 +128,13 @@
                         link4="Контакты"
                         navBtn="Корзина"
             />
-            <BreadCrumbs
-            main="Главная"
-            tel="Контакты"/>
+            <BreadCrumbs main="Главная"
+                         tel="Контакты"/>
+            <Content1 contacts="Контакты"
+            tel1="+7 995 888-35-63"
+            tel2="8 495 902-71-08"
+            email="zakaz@mir-kovrolina.ru"
+            workTime="Пн-Пт, 9:00 до 18:00"/>
         </React.Fragment>
     );
 
